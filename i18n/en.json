@@ -1,0 +1,93 @@
+{
+  "Go to homepage": "Go to homepage",
+  "Switch to dark mode": "Switch to dark mode",
+  "Switch to light mode": "Switch to light mode",
+  "Open language menu": "Open language menu",
+  "Switch language to": "Switch language to",
+  
+  "Головна": "Home",
+  "Номери": "Rooms",
+  "Галерея": "Gallery",
+  "Контакти": "Contacts",
+
+  "Готель": "Hotel",
+  "Гетьман": "Hetman",
+  "Ваш комфортний відпочинок у серці міста. Насолоджуйтесь затишними номерами, смачними сніданками та традиційною гостинністю за доступними цінами.": "Your comfortable stay in the heart of the city. Enjoy cozy rooms, delicious breakfasts, and traditional hospitality at affordable prices.",
+  "Обрати номер": "Choose a room",
+
+  "Наші номери": "Our rooms",
+  "Оберіть номер, який ідеально відповідає вашим потребам. Ми підготували найкращі варіанти для вашого проживання.": "Choose the room that perfectly meets your needs. We have prepared the best options for your stay.",
+  "Оберіть номер, який ідеально відповідає вашим потребам. У нас є варіанти як для соло-мандрівників, так і для великих сімей.": "Choose the room that perfectly meets your needs. We have options for both solo travelers and large families.",
+  "від": "from",
+  "Умови проживання": "Accommodation rules",
+  "Більше фото та деталей": "More photos and details",
+  "Переглянути всі номери": "View all rooms",
+
+  "Послуги готелю": "Hotel services",
+  "Ми дбаємо про те, щоб ваше перебування у \"Гетьмані\" було максимально комфортним, тому пропонуємо додаткові зручності для вашого релаксу.": "We ensure your stay at 'Hetman' is as comfortable as possible, offering additional amenities for your relaxation.",
+
+  "Атмосфера готелю": "Hotel atmosphere",
+  "Зазирніть всередину та відчуйте затишок \"Гетьмана\".": "Take a look inside and feel the coziness of 'Hetman'.",
+  "Всі фотографії": "All photos",
+  "Перейти до галереї": "Go to gallery",
+
+  "Номери та ціни": "Rooms and prices",
+  "Ознайомтеся з усіма варіантами розміщення в готелі «Гетьман». Від затишних стандартів до просторих сімейних люксів — у нас знайдеться ідеальний номер для кожного.": "Explore all accommodation options at the 'Hetman' hotel. From cozy standard rooms to spacious family suites — we have the perfect room for everyone.",
+  "Забронювати": "Book now",
+
+  "Пориньте в атмосферу готелю «Гетьман». Перегляньте фотографії наших номерів, ресторану, інтер'єру та екстер'єру.": "Immerse yourself in the atmosphere of the 'Hetman' hotel. View photos of our rooms, restaurant, interior, and exterior.",
+
+  "Зв'яжіться з нами для бронювання або уточнення деталей. Ми завжди раді вам допомогти!": "Contact us for reservations or details. We are always happy to help!",
+  "Телефон": "Phone",
+  "Бронювання та консультації (24/7)": "Booking and consultations (24/7)",
+  "Email": "Email",
+  "Для співпраці та офіційних запитів": "For cooperation and official requests",
+  "Адреса": "Address",
+  "Відкрити в Google Maps": "Open in Google Maps",
+  "Месенджери": "Messengers",
+  "Соцмережі та відгуки": "Social media and reviews",
+
+  "Заїзд: з 14:00 | Виїзд: до 12:00 (ранній/пізній — доплата 50% вартості доби)": "Check-in: from 14:00 | Check-out: until 12:00 (early/late — 50% surcharge)",
+  "Заїзд: з 14:00 | Виїзд: до 12:00 (ранній/пізній — доплата 50%)": "Check-in: from 14:00 | Check-out: until 12:00 (early/late — 50% surcharge)",
+  "Туристичний збір: 34,60 грн/добу з особи (лише з повнолітніх)": "City tax: 34.60 UAH/day per person (adults only)",
+  "Туристичний збір: 34,60 грн/добу з особи": "City tax: 34.60 UAH/day per person",
+  "Розміщення з тваринкою: 500 грн за добу": "Pet accommodation: 500 UAH per day",
+  "Знижки: 10% для УБД; від 10 до 31% іменинникам (відсоток = дата народження)": "Discounts: 10% for combat veterans; 10-31% for birthdays (percent = birth date)",
+  "Знижки: 10% для УБД; від 10 до 31% іменинникам": "Discounts: 10% for combat veterans; 10-31% for birthdays",
+
+  "Стандарт 2+1": "Standard 2+1",
+  "Ідеальний варіант для сім'ї з дитиною або невеликої компанії. Затишний інтер'єр та всі базові зручності для комфортного відпочинку.": "An ideal option for a family with a child or a small group. Cozy interior and all basic amenities for a comfortable stay.",
+
+  "Сімейний Люкс": "Family Suite",
+  "Місткість: 4 особи. Просторий номер, що складається з 3 кімнат, кухні та окремої ванної кімнати (ванна і душ). Два великих двоспальних ліжка.": "Capacity: 4 people. Spacious suite consisting of 3 rooms, a kitchen, and a separate bathroom (bathtub and shower). Two large double beds.",
+
+  "Сімейний Напівлюкс": "Family Junior Suite",
+  "Просторий номер для трьох гостей зі зручним зонуванням та всім необхідним для приємного відпочинку родиною.": "A spacious room for three guests with convenient zoning and everything necessary for a pleasant family stay.",
+
+  "Люкс Двомісний": "Double Suite",
+  "Елегантний номер з вишуканим дизайном та підвищеним рівнем комфорту. Ідеально підходить для тих, хто цінує простір та сервіс.": "An elegant room with exquisite design and an increased level of comfort. Perfect for those who appreciate space and service.",
+
+  "Стандарт 1+1+1": "Standard 1+1+1",
+  "Чудовий вибір для подорожуючих з друзями або колегами. Три комфортні окремі ліжка та зручна робоча зона.": "A great choice for traveling with friends or colleagues. Three comfortable single beds and a convenient workspace.",
+
+  "Стандарт 1+1": "Standard 1+1",
+  "Класичний номер (Twin) для двох гостей. Зручний варіант для ділових поїздок чи туристичних візитів.": "A classic Twin room for two guests. A convenient option for business trips or tourist visits.",
+
+  "Стандарт 2": "Standard 2",
+  "Оптимальний вибір для комфортного відпочинку після дороги. Затишний інтер'єр та м'яке двоспальне ліжко.": "The optimal choice for comfortable rest after a journey. Cozy interior and a soft double bed.",
+  "Оптимальний вибір для комфортного відпочинку після дороги чи ділових зустрічей. Затишний інтер'єр, зручне ліжко та всі базові зручності для вашого спокою.": "The optimal choice for comfortable rest after a journey or business meetings. Cozy interior, comfortable bed, and all basic amenities for your peace of mind.",
+
+  "Люкс Гетьманський Сімейний": "Hetman Family Suite",
+  "Розкішний фірмовий номер для незабутнього відпочинку. Ексклюзивний дизайн та максимум простору для вашої родини.": "A luxurious signature suite for an unforgettable vacation. Exclusive design and maximum space for your family.",
+
+  "Просторий номер з вдалим зонуванням, спеціально створений для зручного розміщення сімей з дітьми або невеликих компаній.": "A spacious room with excellent zoning, specially designed for comfortable accommodation of families with children or small groups.",
+  "Елегантний номер з вишуканим дизайном та підвищеним рівнем комфорту. Ідеально підходить для тих, хто цінує простір та бездоганний сервіс.": "An elegant room with exquisite design and an increased level of comfort. Perfect for those who appreciate space and impeccable service.",
+
+  "Сніданки": "Breakfasts",
+  "Ресторан працює лише на сніданках. П'ять варіантів по меню.": "The restaurant is open for breakfast only. Five menu options.",
+  "Почніть свій день смачно! До ваших послуг п'ять збалансованих варіантів сніданків на вибір. Свіжі продукти, запашна кава та традиційні рецепти зарядять вас енергією на весь день.": "Start your day deliciously! We offer five balanced breakfast options to choose from. Fresh products, aromatic coffee, and traditional recipes will energize you for the whole day.",
+
+  "Сауна": "Sauna",
+  "750 грн/год (до 4 осіб), за додаткову особу — доплата.": "750 UAH/hour (up to 4 people), surcharge for each additional person.",
+  "Відновіть сили та зніміть втому в нашій затишній сауні. Ідеальне місце для релаксу після насиченого дня, прогулянок містом або довгої дороги. Справжній відпочинок для тіла та душі.": "Restore your strength and relieve fatigue in our cozy sauna. An ideal place to relax after a busy day, walking around the city, or a long journey. True relaxation for body and soul."
+}
