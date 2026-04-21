@@ -1,4 +1,3 @@
-import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@wawjs/ngx-translate';
@@ -8,7 +7,7 @@ import { LanguageService } from '../../feature/language/language.service';
 
 @Component({
     selector: 'app-topbar',
-    imports: [NgOptimizedImage, RouterLink, RouterLinkActive, TranslatePipe],
+    imports: [RouterLink, RouterLinkActive, TranslatePipe],
     templateUrl: './topbar.component.html',
     styleUrl: './topbar.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
