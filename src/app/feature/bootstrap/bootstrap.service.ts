@@ -2,7 +2,6 @@ import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import { inject, Injectable, PLATFORM_ID, TransferState } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { CompanyService } from '../company/company.service';
-import { ItemService } from '../item/item.service';
 import { BOOTSTRAP_STATE_KEY } from './bootstrap.const';
 import { BootstrapData } from './bootstrap.interface';
 
@@ -13,7 +12,6 @@ export class BootstrapService {
 	private _platformId = inject(PLATFORM_ID);
 	private _transferState = inject(TransferState);
 	private _companyService = inject(CompanyService);
-	private _itemService = inject(ItemService);
 
 	async initialize() {
 		const transferData = this._transferState.get<BootstrapData | null>(
@@ -49,10 +47,6 @@ export class BootstrapService {
 	private _apply(data: BootstrapData) {
 		if (data.company) {
 			this._companyService.company.set(data.company);
-		}
-
-		if (Array.isArray(data.items)) {
-			this._itemService.items.set(data.items);
 		}
 	}
 

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "standard-double-single",
+    "name": "Стандарт 2+1",
+    "description": "Ідеальний варіант для сім'ї з дитиною або невеликої компанії. Затишний інтер'єр та всі базові зручності для комфортного відпочинку.",
+    "price": "1800 ₴",
+    "image": "/assets/room/standard-double-single.jpg"
+  },
+  {
+    "id": "family-suite",
+    "name": "Сімейний Люкс",
+    "description": "Місткість: 4 особи. Просторий номер, що складається з 3 кімнат, кухні та окремої ванної кімнати (ванна і душ). Два великих двоспальних ліжка.",
+    "price": "3500 ₴",
+    "image": "/assets/room/family-suite.jpg"
+  },
+  {
+    "id": "family-junior-suite-triple",
+    "name": "Сімейний Напівлюкс",
+    "description": "Просторий номер для трьох гостей зі зручним зонуванням та всім необхідним для приємного відпочинку родиною.",
+    "price": "2500 ₴",
+    "image": "/assets/room/family-junior-suite-triple.jpg"
+  },
+  {
+    "id": "suite-double",
+    "name": "Люкс Двомісний",
+    "description": "Елегантний номер з вишуканим дизайном та підвищеним рівнем комфорту. Ідеально підходить для тих, хто цінує простір та сервіс.",
+    "price": "2800 ₴",
+    "image": "/assets/room/suite-double.jpg"
+  },
+  {
+    "id": "standard-three-single",
+    "name": "Стандарт 1+1+1",
+    "description": "Чудовий вибір для подорожуючих з друзями або колегами. Три комфортні окремі ліжка та зручна робоча зона.",
+    "price": "1900 ₴",
+    "image": "/assets/room/standard-three-single.jpg"
+  },
+  {
+    "id": "standard-two-single",
+    "name": "Стандарт 1+1",
+    "description": "Класичний номер (Twin) для двох гостей. Зручний варіант для ділових поїздок чи туристичних візитів.",
+    "price": "1600 ₴",
+    "image": "/assets/room/standard-two-single.jpg"
+  },
+  {
+    "id": "standard-double",
+    "name": "Стандарт 2",
+    "description": "Оптимальний вибір для комфортного відпочинку після дороги. Затишний інтер'єр та м'яке двоспальне ліжко.",
+    "price": "1600 ₴",
+    "image": "/assets/room/standard-double.jpg"
+  },
+  {
+    "id": "suite-hetman-family-triple",
+    "name": "Люкс Гетьманський Сімейний",
+    "description": "Розкішний фірмовий номер для незабутнього відпочинку. Ексклюзивний дизайн та максимум простору для вашої родини.",
+    "price": "4000 ₴",
+    "image": "/assets/room/suite-hetman-family-triple.jpg"
+  }
+]

@@ -1,51 +1,60 @@
-<main class="mx-auto max-w-[var(--container)] px-3 pb-8 pt-3 sm:px-4 sm:pb-10">
-	<section
-		class="overflow-hidden rounded-[1.2rem] border border-[var(--c-border)] bg-[var(--c-bg-secondary)] shadow-[var(--shadow-sm)]"
-	>
-		<div
-			class="border-b border-[var(--c-border)] bg-[linear-gradient(135deg,rgba(197,61,61,0.14),rgba(217,168,88,0.08))] px-4 py-5 sm:px-5"
-		>
-			<p
-				class="text-[12px] font-semibold uppercase tracking-[0.18em] text-[var(--c-secondary)]"
-				translate
-			>
-				Gallery
-			</p>
-		</div>
+<div class="bg-[var(--c-bg-secondary)] px-4 pb-12 pt-24 sm:px-6 sm:pb-16 sm:pt-32">
+    <div class="mx-auto max-w-[var(--container)] text-center">
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight text-[var(--c-text-primary)] sm:text-5xl">
+            {{ 'Галерея' | translate }}
+        </h1>
+        <p class="mx-auto max-w-2xl text-lg text-[var(--c-text-secondary)]">
+            {{ "Пориньте в атмосферу готелю «Гетьман». Перегляньте фотографії наших номерів, ресторану, інтер'єру та екстер'єру." | translate }}
+        </p>
+    </div>
+</div>
 
-		<div class="grid gap-3 p-3 sm:grid-cols-2 sm:p-4 lg:grid-cols-3">
-			@for (photo of photos; track photo.src) {
-				<figure
-					class="overflow-hidden rounded-[1rem] border border-[var(--c-border)] bg-[var(--c-bg-primary)]"
-				>
-					<button
-						class="gallery-trigger block w-full cursor-zoom-in"
-						[attr.aria-label]="'Open photo in full screen: ' + photo.alt"
-						(click)="openPhoto(photo)"
-						type="button"
-					>
-						<img
-							class="gallery-photo h-72 w-full object-cover sm:h-80"
-							[attr.alt]="photo.alt"
-							[src]="photo.src"
-							loading="lazy"
-						/>
-					</button>
-				</figure>
-			}
-		</div>
-	</section>
+<section class="bg-[var(--c-bg-primary)] px-4 py-12 sm:px-6 md:py-16">
+    <div class="mx-auto max-w-[var(--container)]">
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            @for (image of images; track image) {
+                <button 
+                    type="button"
+                    (click)="openImage(image)"
+                    class="group relative aspect-square w-full overflow-hidden rounded-xl bg-[var(--c-bg-secondary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--c-primary)] focus-visible:ring-offset-2"
+                >
+                    <img 
+                        [src]="image" 
+                        alt="Фото галереї готелю" 
+                        class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    >
+                    <div class="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition-all duration-300 group-hover:bg-black/30 group-hover:opacity-100">
+                        <span class="material-symbols-outlined text-[32px] text-white drop-shadow-md">
+                            zoom_in
+                        </span>
+                    </div>
+                </button>
+            }
+        </div>
+    </div>
+</section>
 
-	@if (selectedPhoto(); as photo) {
-		<div
-			class="fullscreen-backdrop fixed inset-0 z-50 flex cursor-zoom-out items-center justify-center bg-black/88 p-4"
-		>
-			<img
-				class="fullscreen-photo max-h-full max-w-full rounded-[1rem] object-contain"
-				[attr.alt]="photo.alt"
-				[src]="photo.src"
-				(click)="closePhoto()"
-			/>
-		</div>
-	}
-</main>
+@if (selectedImage()) {
+    <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm sm:p-8">
+        
+        <button 
+            type="button" 
+            (click)="closeImage()"
+            class="absolute right-4 top-4 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-black/50 text-white transition-colors hover:bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:right-8 sm:top-8"
+            aria-label="Закрити фото"
+        >
+            <span class="material-symbols-outlined text-[28px]">close</span>
+        </button>
+
+        <div class="absolute inset-0" (click)="closeImage()"></div>
+
+        <div class="relative max-h-full max-w-full">
+            <img 
+                [src]="selectedImage()" 
+                alt="Збільшене фото галереї" 
+                class="max-h-[90vh] max-w-[90vw] rounded-lg object-contain shadow-2xl ring-1 ring-white/10"
+            >
+        </div>
+        
+    </div>
+}

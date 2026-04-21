@@ -1,74 +1,85 @@
 import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@wawjs/ngx-translate';
 import { ThemeService } from '@wawjs/ngx-ui';
 import { LanguageOption } from '../../feature/language/language.interface';
 import { LanguageService } from '../../feature/language/language.service';
 
 @Component({
-	selector: 'app-topbar',
-	imports: [NgOptimizedImage, RouterLink, TranslatePipe],
-	templateUrl: './topbar.component.html',
-	styleUrl: './topbar.component.scss',
-	changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-topbar',
+    imports: [NgOptimizedImage, RouterLink, RouterLinkActive, TranslatePipe],
+    templateUrl: './topbar.component.html',
+    styleUrl: './topbar.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TopbarComponent {
-	private readonly _translateService = inject(TranslateService);
-	private readonly _themeService = inject(ThemeService);
-	private readonly _languageService = inject(LanguageService);
+    private readonly _translateService = inject(TranslateService);
+    private readonly _themeService = inject(ThemeService);
+    private readonly _languageService = inject(LanguageService);
 
-	protected readonly mode = computed(() => this._themeService.mode() ?? 'light');
-	protected readonly languageMenuOpen = signal(false);
-	protected readonly languages = this._languageService.languages;
-	protected readonly currentLanguage = computed(() =>
-		this._languageService.getLanguage(this._languageService.language()),
-	);
-	protected readonly toggleIcon = computed(() =>
-		this.mode() === 'dark' ? 'light_mode' : 'dark_mode',
-	);
-	protected readonly toggleLabel = computed(() =>
-		this.mode() === 'dark'
-			? this._translateService.translate('Switch to light mode')()
-			: this._translateService.translate('Switch to dark mode')(),
-	);
-	protected readonly languageMenuLabel = computed(() =>
-		this._translateService.translate('Open language menu')(),
-	);
-	protected readonly languageCycleLabel = computed(
-		() =>
-			`${this._translateService.translate('Switch language to')()} ${this.getNextLanguage().label}`,
-	);
+    protected readonly navItems = [
+        { label: 'Головна', route: '/', exact: true },
+        { label: 'Номери', route: '/rooms', exact: true },
+        { label: 'Галерея', route: '/gallery', exact: true },
+        { label: 'Контакти', route: '/socials', exact: true },
+    ];
 
-	constructor() {
-		this._themeService.init();
-		this._languageService.init();
-	}
+    protected readonly mode = computed(() => this._themeService.mode() ?? 'light');
+    protected readonly languageMenuOpen = signal(false);
+    protected readonly languages = this._languageService.languages;
+    protected readonly currentLanguage = computed(() =>
+        this._languageService.getLanguage(this._languageService.language()),
+    );
+    protected readonly toggleIcon = computed(() =>
+        this.mode() === 'dark' ? 'light_mode' : 'dark_mode',
+    );
+    protected readonly toggleLabel = computed(() =>
+        this.mode() === 'dark'
+            ? this._translateService.translate('Switch to light mode')()
+            : this._translateService.translate('Switch to dark mode')(),
+    );
+    protected readonly languageMenuLabel = computed(() =>
+        this._translateService.translate('Open language menu')(),
+    );
+    protected readonly languageCycleLabel = computed(
+        () =>
+            `${this._translateService.translate('Switch language to')()} ${this.getNextLanguage().label}`,
+    );
 
-	protected toggleMode() {
-		const nextMode = this.mode() === 'dark' ? 'light' : 'dark';
-		this._themeService.setMode(nextMode);
-	}
+    constructor() {
+        this._themeService.init();
+        this._languageService.init();
+    }
 
-	protected nextLanguage() {
-		this._languageService.nextLanguage();
-		this.languageMenuOpen.set(false);
-	}
+    protected toggleMode() {
+        const nextMode = this.mode() === 'dark' ? 'light' : 'dark';
+        this._themeService.setMode(nextMode);
+    }
 
-	protected toggleLanguageMenu() {
-		this.languageMenuOpen.update((open) => !open);
-	}
+    protected nextLanguage() {
+        this._languageService.nextLanguage();
+        this.languageMenuOpen.set(false);
 
-	protected setLanguage(language: LanguageOption) {
-		this._languageService.setLanguage(language.code);
-		this.languageMenuOpen.set(false);
-	}
+        window.location.reload();
+    }
 
-	protected getNextLanguage() {
-		const languages = this.languages();
-		const currentCode = this.currentLanguage().code;
-		const currentIndex = languages.findIndex((language) => language.code === currentCode);
+    protected toggleLanguageMenu() {
+        this.languageMenuOpen.update((open) => !open);
+    }
 
-		return languages[(currentIndex + 1) % languages.length] ?? languages[0]!;
-	}
+    protected setLanguage(language: LanguageOption) {
+        this._languageService.setLanguage(language.code);
+        this.languageMenuOpen.set(false);
+
+        window.location.reload();
+    }
+
+    protected getNextLanguage() {
+        const languages = this.languages();
+        const currentCode = this.currentLanguage().code;
+        const currentIndex = languages.findIndex((language) => language.code === currentCode);
+
+        return languages[(currentIndex + 1) % languages.length] ?? languages[0]!;
+    }
 }
